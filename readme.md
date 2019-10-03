@@ -59,6 +59,8 @@ Run `processImage.py` in order to detect the lane on a single image.
 Run `processVideo.py` in order to detect the lane on a video.
 
 
+## Step-by-step explanation of the algorithm used:
+
 ### 1. Video Processing: The video footage frames will be sent with the speed of 100 frames per second. This can be reduced if the device being used has lower processing power.
 The device we're using here is Raspberry Pi, which has processor clocked at 1.4 GHz.
 
