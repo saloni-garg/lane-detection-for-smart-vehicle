@@ -70,17 +70,22 @@ This huge colour difference helps us identify lanes as lines in the video frames
 
 
 ### 3. Lane Area Segmentation:
-
+A triangular mask is prepared to segment the lane area and discard the irrelevant areas in the frame to increase the effectiveness at later stages.
 
 ### 4. Hough transform:
+This feature extraction technique is used to extract the lanes as straight lines from the video frames, using the voting procedure.
+Read more about Hough Transform here: https://www.researchgate.net/publication/272195556_A_Survey_on_Hough_Transform_Theory_Techniques_and_Applications
 
+Since our frame passed through the Canny Detector may be interpreted simply as a series of white points representing the edges in our image space, we can apply the same technique to identify which of these points are connected to the same line, and if they are connected, what its equation is so that we can plot this line on our frame.
+Generally, the more curves intersecting in Hough space means that the line represented by that intersection corresponds to more points. For our impxlementation, we will define a minimum threshold number of intersections in Hough space to detect a line. Therefore, Hough transform basically keeps track of the Hough space intersections of every point in the frame. If the number of intersections exceeds a defined threshold, we identify a line with the corresponding θ and r parameters.
 
 ### 5. Visualization and Export:
+The lane is visualized as two light green, linearly fitted polynomials which will be overlayed on our input frame.
 
 ## To-do:
-- [ ] Complete Documentation
-- [ ] Include results obtained when a video is input.
-- [ ] Add pointers to related Research articles.
+- [] Complete Documentation
+- [] Include results obtained when a video is input.
+- [] Add pointers to related Research articles.
 
 ## Acknowledgement:
 This projects uses OpenCV, Canny Edge Detection Algorithm, Hough Transoformation, and TensorFlow.
