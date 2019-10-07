@@ -83,9 +83,9 @@ Generally, the more curves intersecting in Hough space means that the line repre
 The lane is visualized as two light green, linearly fitted polynomials which will be overlayed on our input frame.
 
 ## To-do:
-- [] Complete Documentation
-- [] Include results obtained when a video is input.
-- [] Add pointers to related Research articles.
+- [x] Complete Documentation
+- [x] Include results obtained when a video is input.
+- [x] Add pointers to related Research articles.
 
 ## Acknowledgement:
 This projects uses OpenCV, Canny Edge Detection Algorithm, Hough Transoformation, and TensorFlow.
