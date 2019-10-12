@@ -55,8 +55,8 @@ and check that the install worked:
 
 **Step 4:** Run
 
-Run `processImage.py` in order to detect the lane on a single image.
-Run `processVideo.py` in order to detect the lane on a video.
+Run `Image_processing.py` in order to detect the lane on a single image.
+Run `Video_processing.py` in order to detect the lane on a video.
 
 
 ## Step-by-step explanation of the algorithm used:
